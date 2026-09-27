@@ -1,0 +1,16 @@
+{
+  "lockfileVersion": 2,
+  "configVersion": 1,
+  "workspaces": {
+    "": {
+      "name": "community-jlcpcb-api-client",
+    },
+    "packages/typescript": {
+      "name": "@community-jlcpcb/client",
+      "version": "0.1.0",
+    },
+  },
+  "packages": {
+    "@community-jlcpcb/client": ["@community-jlcpcb/client@workspace:packages/typescript"],
+  }
+}

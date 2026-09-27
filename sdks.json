@@ -1,0 +1,33 @@
+{
+  "portal": "https://api.jlcpcb.com/",
+  "api": "https://open.jlcpcb.com",
+  "sdks": [
+    {
+      "id": "python",
+      "language": "python",
+      "status": "external",
+      "maintainer": "community",
+      "repository": "https://github.com/i2cjak/jlcpcb_api",
+      "path": "external/python",
+      "package": "jlcpcb-api",
+      "notes": "Community client reverse-engineered from the official Java SDK. Tracked as a git submodule; do not vendor or fork it in this repo."
+    },
+    {
+      "id": "typescript",
+      "language": "typescript",
+      "status": "first-party",
+      "runtimes": ["browser", "node", "worker"],
+      "path": "packages/typescript",
+      "package": "@community-jlcpcb/client",
+      "notes": "Zero-dependency client using fetch and Web Crypto. Browser, Node 18+, and Cloudflare Workers."
+    },
+    {
+      "id": "java",
+      "language": "java",
+      "status": "official",
+      "distribution": "portal-download",
+      "portal": "https://api.jlcpcb.com/",
+      "notes": "Official SDK is Java-only and downloaded from the API console after an app is approved. Not vendored."
+    }
+  ]
+}

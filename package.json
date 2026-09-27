@@ -1,0 +1,10 @@
+{
+  "name": "community-jlcpcb-api-client",
+  "private": true,
+  "type": "module",
+  "workspaces": ["packages/*"],
+  "scripts": {
+    "test": "bun test",
+    "typecheck": "bun run --filter @community-jlcpcb/client typecheck"
+  }
+}
