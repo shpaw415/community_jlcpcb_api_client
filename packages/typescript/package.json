@@ -4,6 +4,14 @@
   "description": "JLCPCB OpenAPI client for browser, Node, and Workers.",
   "type": "module",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shpaw415/community_jlcpcb_api_client",
+    "directory": "packages/typescript"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "exports": {
     ".": {
       "bun": "./src/index.ts",
@@ -19,6 +27,10 @@
   },
   "scripts": {
     "typecheck": "tsc -p tsconfig.json --noEmit",
-    "build": "tsc -p tsconfig.json"
+    "build": "tsc -p tsconfig.json",
+    "prepublishOnly": "bun run build"
+  },
+  "devDependencies": {
+    "typescript": "^7.0.2"
   }
 }

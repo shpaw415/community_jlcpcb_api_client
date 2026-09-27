@@ -5,6 +5,7 @@
   "workspaces": ["packages/*"],
   "scripts": {
     "test": "bun test",
-    "typecheck": "bun run --filter @community-jlcpcb/client typecheck"
+    "typecheck": "bun run --filter @community-jlcpcb/client typecheck",
+    "build": "bun run --filter @community-jlcpcb/client build"
   }
 }
