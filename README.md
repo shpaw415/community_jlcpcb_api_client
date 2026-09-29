@@ -43,7 +43,12 @@ const parts = await client.components.getDetailsByCode({
   componentCodes: ["C2040"],
 });
 parts.raiseForStatus();
+
+const found = await JLCPCBClient.searchParts({ keyword: "10k 0603" });
+found.raiseForStatus();
 ```
+
+`searchParts` posts to the public parts catalog. It does not use app credentials, does not sign the request, and does not place an order. LCSC codes still use `components.getDetailsByCode`.
 
 Credentials come from an app on the API portal (`appId`, `accessKey`, `secretKey`). Business success is HTTP 200 and `code === 200`. A 403 with `API insufficient permissions` means the app exists but that API scope is not enabled.
 

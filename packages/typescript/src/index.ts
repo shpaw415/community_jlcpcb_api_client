@@ -5,6 +5,8 @@ export type { EnvSource, JLCPCBClientOptions, RequestOptions, UploadOptions } fr
 export { DEFAULT_ENDPOINT, endpoints, unresolvedEndpoints } from "./endpoints.js";
 export { JLCBusinessError, JLCError, JLCProtocolError, JLCTransportError } from "./errors.js";
 export { compactJson, toPayload } from "./json.js";
+export { PARTS_CATALOG_URL, searchParts } from "./parts.js";
+export type { PartHit, PartsSearchOptions, PartsSearchRequest } from "./parts.js";
 export { ApiResponse } from "./response.js";
 export type {
   BatchNumRequest,

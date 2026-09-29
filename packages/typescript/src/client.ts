@@ -2,6 +2,7 @@ import { JLCAuth, type JLCAuthOptions } from "./auth.js";
 import { endpoints } from "./endpoints.js";
 import { JLCError, JLCProtocolError, JLCTransportError } from "./errors.js";
 import { compactJson } from "./json.js";
+import { searchParts, type PartHit, type PartsSearchOptions, type PartsSearchRequest } from "./parts.js";
 import { ApiResponse } from "./response.js";
 import type {
   BatchNumRequest,
@@ -117,6 +118,13 @@ export class JLCPCBClient {
     this.components = new ComponentApi(this);
     this.stencil = new StencilApi(this);
     this.tdp = new TdpApi(this);
+  }
+
+  static searchParts(
+    body: PartsSearchRequest,
+    options?: PartsSearchOptions,
+  ): Promise<ApiResponse<PartHit[]>> {
+    return searchParts(body, options);
   }
 
   static fromEnv(options?: {
